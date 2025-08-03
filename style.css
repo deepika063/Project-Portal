@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  background: url("college.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form input,
+form select {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  width: 95%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #357ABD;
+}
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Header */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 33, 71, 0.9); /* navy blue with opacity */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.college-logo {
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Navigation bar */
+.nav-bar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-bar a,
+.nav-bar .login-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-bar a:hover,
+.nav-bar .login-btn:hover {
+  background-color: #0055aa;
+}
+
+/* Add spacing below header */
+.login-container {
+  padding-top: 120px;
+  max-width: 400px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Login form styling */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container input,
+.login-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #002147;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #004494;
+}
+
+/*footer section*/
+
+/* Footer Styling */
+footer {
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-container p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body > .main-content {
+  flex: 1;
+}
+
+
+
