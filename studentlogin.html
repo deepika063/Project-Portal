@@ -6,55 +6,66 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <header class="page-header">
-    <div class="logo-background">
-      <img src="logo.png" alt="College Logo" class="college-logo">
-    </div>
-    <nav class="nav-bar">
-      <a href="index.html">Home</a>
-      <label for="login-popup" class="login-btn">Login</label>
-      <a href="index.html" class="logout-btn">Logout</a>
-
-    </nav>
-  </header>
-
-
-
-
-
-  <div class="login-container">
-    <h2>Student Login</h2>
-    <form action="#" method="post">
-      <input type="text" placeholder="Username" name="username" required />
-      <input type="password" placeholder="Password" name="password" required />
-      <select name="batch" required>
-        <option value="">Select Batch</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
-        <option value="16">16</option>
-        <option value="17">17</option>
-        <option value="18">18</option>
-        
-      </select>
-      <button type="submit">Login</button>
-    </form>
+<header class="page-header">
+  <div class="logo-background">
+    <img src="logo.png" alt="College Logo" class="college-logo">
   </div>
+  <nav class="nav-bar">
+    <a href="index.html">Home</a>
+    <label class="login-btn">Login</label>
+    <a href="index.html" class="logout-btn">Logout</a>
+  </nav>
+</header>
 
+<div class="login-container">
+  <h2>Student Login</h2>
+  <form id="student-login-form">
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <select id="batch" required>
+      <option value="">Select Batch</option>
+      <option value="Batch-1">Batch 1</option>
+      <option value="Batch-2">Batch 2</option>
+      <option value="Batch-3">Batch 3</option>
+      <option value="Batch-4">Batch 4</option>
+      <option value="Batch-5">Batch 5</option>
+      <option value="Batch-6">Batch 6</option>
+      <option value="Batch-7">Batch 7</option>
+      <option value="Batch-8">Batch 8</option>
+      <option value="Batch-9">Batch 9</option>
+      <option value="Batch-10">Batch 10</option>
+      <option value="Batch-11">Batch 11</option>
+      <option value="Batch-12">Batch 12</option>
+      <option value="Batch-13">Batch 13</option>
+      <option value="Batch-14">Batch 14</option>
+      <option value="Batch-15">Batch 15</option>
+      <option value="Batch-16">Batch 16</option>
+      <option value="Batch-17">Batch 17</option>
+      <option value="Batch-18">Batch 18</option>
+    </select>
+    <button type="submit">Login</button>
+  </form>
+</div>
 
-  <footer>
+<script>
+document.getElementById("student-login-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const batch = document.getElementById("batch").value;
+
+  if (username === "student1" && password === "pass123") {
+    localStorage.setItem("role", "student");
+    localStorage.setItem("batch", batch);
+    window.location.href = "projects.html";
+  } else {
+    alert("Invalid student credentials");
+  }
+});
+</script>
+
+<footer>
   <div class="footer-container">
     <p>&copy; 2025 Project Portal. All rights reserved.</p>
     <div class="footer-links">
@@ -64,7 +75,5 @@
     </div>
   </div>
 </footer>
-
-
 </body>
 </html>
