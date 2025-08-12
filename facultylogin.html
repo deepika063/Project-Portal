@@ -6,31 +6,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header class="page-header">
-    <div class="logo-background">
-      <img src="logo.png" alt="College Logo" class="college-logo">
-    </div>
-    <nav class="nav-bar">
-      <a href="index.html">Home</a>
-      <label for="login-popup" class="login-btn">Login</label>
-      <a href="index.html" class="logout-btn">Logout</a>
-
-    </nav>
-  </header>
-
-
-
-  <div class="login-container">
-    <h2>Faculty Login</h2>
-    <form action="#" method="post">
-      <input type="text" placeholder="Faculty Username" name="username" required />
-      <input type="password" placeholder="Password" name="password" required />
-      <button type="submit">Login</button>
-    </form>
+<header class="page-header">
+  <div class="logo-background">
+    <img src="logo.png" alt="College Logo" class="college-logo">
   </div>
+  <nav class="nav-bar">
+    <a href="index.html">Home</a>
+    <label class="login-btn">Login</label>
+    <a href="index.html" class="logout-btn">Logout</a>
+  </nav>
+</header>
 
-  
-  <footer>
+<div class="login-container">
+  <h2>Faculty Login</h2>
+  <form id="faculty-login-form">
+    <input type="text" id="faculty-username" placeholder="Faculty Username" required />
+    <input type="password" id="faculty-password" placeholder="Password" required />
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("faculty-login-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById("faculty-username").value.trim();
+  const password = document.getElementById("faculty-password").value.trim();
+
+  if (username === "faculty1" && password === "facpass") {
+    localStorage.setItem("role", "faculty");
+    window.location.href = "projects.html";
+  } else {
+    alert("Invalid faculty credentials");
+  }
+});
+</script>
+
+<footer>
   <div class="footer-container">
     <p>&copy; 2025 Project Portal. All rights reserved.</p>
     <div class="footer-links">
@@ -40,9 +52,5 @@
     </div>
   </div>
 </footer>
-
- 
-
-
 </body>
 </html>
